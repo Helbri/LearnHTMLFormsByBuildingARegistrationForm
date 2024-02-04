@@ -4,8 +4,8 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color:#1b1b32;
-    color:#f5f6f7;
+    background-color: #1b1b32;
+    color: #f5f6f7;
     font-family: Tahoma;
     font-size: 16px;
 }
@@ -13,13 +13,55 @@ body {
 h1, p {
     margin: 1em auto;
     text-align: center;
-    }
+}
+
+form{
+    /* 	vw 1% de la largeur du viewport (la zone d'affichage). Source: developer.mozilla.org*/
+    margin: 0 auto;
+    width: 60vw;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+fieldset{
+    /*les fieldset ont une bordure de base qu'il est possible d'effacer.*/
+    border: none;
+    border-bottom: 3px solid #3b3b4f; /*affiche une bordure en bas des fieldset, pour les séparer visuellement*/
+    padding:2rem 0;
+}
+
+fieldset:last-of-type{
+    /*élément:last-of-type permet de sélectionner le dernier élément*/
+    border-bottom:none;
+}
 
 label{
+    /*l'élément label est "inline" pour les placer. Pour les empiler, il faut les contraindre à s'afficher en "block*/
     /*le "em" correspond à la taille de la police de caractère de l’élément en cours
     le « rem » permet de définir une valeur constante tout le long du document égale à la taille de la police de l’élément racine
     Cette unité peut être alors utilisée pour créer des éléments et propriétés CSS responsives puisque qu’elle s’adaptera à la taille de la police du support d’affichage
     référence: https://www.codeur.com/tuto/css/unite-de-mesure-taille-px-em-rem/*/
     display: block;
     margin: 0.5rem 0;
+}
+
+input,select,textarea{
+    width:100%;
+    margin:10px 0 0 0;
+    min-height:2em;
+}
+
+.inline{
+    /*unset signifie désarmé. Annule la valeur précédente de la propriété sur laquelle la valeur unset a été associée*/
+    /*vertical-align permet d'aligner verticalement.*/
+    /*Sert ici pour aligner les input de type radio qui sont trop haut par rapport au texte*/
+    width:unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input,textarea{
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
 }

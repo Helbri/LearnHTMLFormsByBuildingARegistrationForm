@@ -8,6 +8,10 @@
   <body>
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
+    <!--L'attribut method spécifie comment envoyer les données du formulaire à l'URL spécifiée dans l'attribut action-->
+    <!--les données du formulaire peuvent être envoyées via une requête GET ou une requête POST-->
+    <!--via une requête GET en tant que paramètres d'URL (method get)-->
+    <!--via une requête POST en tant que données dans le corps de la requête (method post)-->
     <form method="post" action="https://register-demo.freecodecamp.org">
       <fieldset>
         <!-- Le premier élément input avec un type de "submit" est automatiquement défini pour soumettre son élément de formulaire parent le plus proche. -->
@@ -39,6 +43,7 @@
         <legend>Account type (required)</legend>
         <label for="personal-account"
           ><input
+            class="inline"
             id="personal-account"
             type="radio"
             name="account-type"
@@ -49,7 +54,12 @@
         <!--l'attribut checked a été placé pour qu'il y ai nécessairement une valeur de choisie-->
         <!--l'input type radio permet de faire un choix et se présente avec des cases de forme circulaire-->
         <label for="business-account"
-          ><input id="business-account" type="radio" name="account-type" />
+          ><input
+            class="inline"
+            id="business-account"
+            type="radio"
+            name="account-type"
+          />
           Business</label
         >
       </fieldset>
@@ -104,4 +114,4 @@
     </form>
   </body>
 </html>
-<!-- step 44 -->
+<!-- step 57 -->
